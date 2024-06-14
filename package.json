@@ -1,0 +1,24 @@
+{
+  "name": "@ig3/md2epub",
+  "version": "1.0.0",
+  "description": "A program to generate epub files from Markdown files.",
+  "main": "index.js",
+  "bin": {
+    "md2epub": "index.js"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "markdown-it": "^13.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [ "markdown", "epub", "converter" ],
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:@ig3/md2epub"
+  },
+  "license": "ISC"
+}
