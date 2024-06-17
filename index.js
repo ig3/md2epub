@@ -83,7 +83,9 @@ const options = ((optionsConfig) => {
   }
 })(optionsConfig);
 
-console.log('opt: ' + JSON.stringify(options, null, 2));
+if (options.verbose) {
+  console.log('opt: ' + JSON.stringify(options, null, 2));
+}
 
 if (options.help) console.log(usage());
 
