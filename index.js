@@ -87,7 +87,7 @@ if (options.verbose) {
   console.log('opt: ' + JSON.stringify(options, null, 2));
 }
 
-if (options.help) console.log(usage());
+if (options.help) return console.log(usage(optionsConfig));
 
 const files = fs.readdirSync('.');
 
