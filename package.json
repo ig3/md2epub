@@ -1,6 +1,6 @@
 {
   "name": "@ig3/md2epub",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A program to generate epub files from Markdown files.",
   "main": "index.js",
   "bin": {
@@ -18,7 +18,7 @@
   "author": "",
   "repository": {
     "type": "git",
-    "url": "git@github.com:@ig3/md2epub"
+    "url": "git@github.com:ig3/md2epub"
   },
   "license": "ISC"
 }
