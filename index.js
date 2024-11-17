@@ -149,8 +149,10 @@ files
   } else if(
     path.endsWith('jpg') ||
     path.endsWith('jpeg') ||
-    path.endsWith('png')
+    path.endsWith('png') ||
+    path.endsWith('gif')
   ) {
+    console.log('process: ' + path);
     processImage(path);
   }
 });
@@ -207,6 +209,10 @@ function processMarkdown (path) {
   } else if (files.includes(image + '.png')) {
     if (content.indexOf(image + '.png') === -1) {
       content = '![](' + image + '.png)\n' + content;
+    }
+  } else if (files.includes(image + '.gif')) {
+    if (content.indexOf(image + '.gif') === -1) {
+      content = '![](' + image + '.gif)\n' + content;
     }
   }
   const html = md.render(content);
@@ -292,7 +298,8 @@ function addContentOpf () {
     const mimeTypes = {
       jpg: 'image/jpeg',
       jpeg: 'image/jpeg',
-      png: 'image/png'
+      png: 'image/png',
+      gif: 'image/gif',
     };
     content += '      <item id="' + basename(image).replaceAll('.', '_') +
       '" href="' + basename(image) +
