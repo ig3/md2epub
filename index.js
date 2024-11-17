@@ -118,7 +118,7 @@ const uuid = crypto.randomUUID();
  * By default, markdown-it renders newlines ('\n') in the output for each
  * newline in the input that forms a paragraph (i.e. a softbreak). But for
  * Chinese the newlines that break up a paragraph typically should not be
- * rendered as a space or newline. Therefore, customize the softreak
+ * rendered as a space or newline. Therefore, customize the softbreak
  * function if the language is CN.
  *
  * See: https://talk.commonmark.org/t/soft-line-breaks-should-not-introduce-spaces/285/4
