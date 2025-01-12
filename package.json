@@ -1,6 +1,6 @@
 {
   "name": "@ig3/md2epub",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A program to generate epub files from Markdown files.",
   "main": "index.js",
   "bin": {
