@@ -338,8 +338,12 @@ function addNavXhtml () {
   nav += '</head>\n';
   nav += '<body>\n';
   nav += '<nav epub:type="toc" id="toc">\n';
-  nav += '<h1 id="toc-title">' + metadata.title + '</h1>\n';
+  nav += '<h1 id="toc-title">Table of Contents</h1>\n';
+  nav += '<p id="toc-title">Title: ' + metadata.title + '</p>\n';
   nav += '<ol class="toc">\n';
+  nav += '  <li id="toc-li-cover"><a href="cover.xhtml">Cover</a></li>\n';
+  nav += '  <li id="toc-li-title"><a href="title_page.xhtml">Title</a></li>\n';
+  nav += '  <li id="toc-li-nav"><a href="nav.xhtml">TOC</a></li>\n';
   chapters
   .forEach((chapter, i) => {
     nav += '  <li id="toc-li-' + i + '"><a href="' +
@@ -445,7 +449,15 @@ function addTocNcx () {
 }
 
 function addStylesheet () {
-  let stylesheet = 'body { font-family: yuesong; font-size: 2em; }\n';
+  let stylesheet = `
+body { font-family: yuesong; font-size: 2em; }
+h1 { font-size: 1.4em; }
+h2 { font-size: 1.2em; }
+h3 { font-size: 1em; }
+h4 { font-size: 0.9em; }
+h5 { font-size: 0.8em; }
+h6 { font-size: 0.7em; }
+`;
   zip.file('EPUB/stylesheet.css', stylesheet);
 }
 
