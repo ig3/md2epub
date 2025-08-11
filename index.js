@@ -337,8 +337,8 @@ function addNavXhtml () {
   nav += '  <link rel="stylesheet" type="text/css" href="stylesheet.css" />\n';
   nav += '</head>\n';
   nav += '<body>\n';
-  nav += '<nav epub:type="toc" id="toc">\n';
-  nav += '<h1 id="toc-title">Table of Contents</h1>\n';
+  nav += '<nav epub:type="toc" id="nav">\n';
+  nav += '<h1 id="toc">Table of Contents</h1>\n';
   nav += '<p id="toc-title">Title: ' + metadata.title + '</p>\n';
   nav += '<ol class="toc">\n';
   nav += '  <li id="toc-li-cover"><a href="cover.xhtml">Cover</a></li>\n';
@@ -409,6 +409,7 @@ function addTitlePageXhtml () {
   title_page += '<tr><td>Loc:</td><td>' + process.cwd() + '</td></tr>\n';
   title_page += '<tr><td>Gen:</td><td>' + date + '</td></tr>\n';
   title_page += '</table>\n';
+  title_page += '<p>' + metadata.description + '</p>\n';
   title_page += '</section>\n';
   title_page += '</body>\n';
   title_page += '</html>\n';
@@ -450,7 +451,7 @@ function addTocNcx () {
 
 function addStylesheet () {
   let stylesheet = `
-body { font-family: yuesong; font-size: 2em; }
+body { font-size: 2em; }
 h1 { font-size: 1.4em; }
 h2 { font-size: 1.2em; }
 h3 { font-size: 1em; }
